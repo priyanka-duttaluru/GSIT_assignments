@@ -1,6 +1,6 @@
 package daily;
 
-public class evenandodd_assignment {
+public class Evenandodd_assignment {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
