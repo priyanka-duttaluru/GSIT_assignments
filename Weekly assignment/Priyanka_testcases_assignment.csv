@@ -1,0 +1,123 @@
+﻿Project Name:,Skyscanner,,,,,,,,,
+Module Name:,,,,,,,,,,
+Created By:,Priyanka Duttaluru,,,,,,,,,
+Date of Creation:,,,,,,,,,,
+Date of Review:,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+Test Case Id,Requirement Id,Test Case Scenario,Test Case Description,Precondition,Test case steps Taken,Test Data,Expected Result,Actual Result,Defect Id,
+TC_01,R-101,Verify return flight search,"Verify that the user can search for a return flight by providing valid departure city, destination city, departure date, and return date.","1. User is on Skyscanner home page.
+2. User is not logged in
+3. User is selected Return option","1. Select flight trip.
+2. Enter a valid departure city.
+3. Enter a valid destination city.
+4. Select a valid departure date.
+5. Select a valid return date.
+6. Select Travellers and cabin class.
+7. Click Search.","From: Hyderabad
+To: Delhi
+Departure: 15 Sep 2026
+Return: 20 Sep 2026
+Travellers: 2 Adults, 1 Child
+Child Age: 11
+Cabin: Business",Flight search results should display for the selected route and travel dates.,As Expected,Pass,
+TC_02,R-102,Verify destination validation,Verify that the system prevents the user from searching when the destination is not provided.,"1. User is on Skyscanner home page.
+2. User is not logged in","1. Select flight trip.
+2. Enter a valid departure city.
+3. Leave the destination field empty.
+4. Select valid departure and return dates
+5. Select Travellers and cabin class.
+6. Click Search.","From: Hyderabad
+Destination: Not provided",The system prevents the search and displays an appropriate validation message asking the user to enter a destination.,As Expected,Pass,
+TC_03,R-103,Verify travellers and cabin class selection,Verify that the user can modify the number of travellers and select a cabin class before performing a flight search.,"1. User is on Skyscanner home page.
+2. User is not logged in","1. Select Travellers and cabin class.
+2. Select a cabin class.
+3.Change the number of travellers.
+4. Click Apply.
+","Travellers: 2 Adults, 1 Child
+Child Age: 11
+Cabin: Business",The selected traveller count and cabin class are displayed correctly and applied correctly.,As Expected,"Pass		
+		
+		
+		
+		",
+TC_04,R-104,Verify Flight Sorting by Cheapest and Fastest,Verify that the user can sort flight search results using Cheapest and Fastest options.,"1. User is on Skyscanner home page.
+2. User is not logged in","1.Perform a valid flight search.
+2. Select Cheapest.
+3. Verify the order of flight results.
+4. Select Fastest.
+5. Verify the order of flight results.		
+			
+			
+			
+			","From: Hyderabad
+To: Delhi
+Departure: 15 Sep 2026
+Return: 20 Sep 2026
+Travellers: 2 Adults, 1 Child
+Child Age: 11
+Cabin: Business","When Cheapest is selected, lower-priced flights are prioritized. When Fastest is selected, flights with shorter travel duration are prioritized.			
+			
+			
+			
+			",As Expected,"Pass		
+		
+		
+		
+		",
+TC_05,R-105,Verify Direct Flights Filter,Verify that applying the Direct Flights filter displays only flights without stops.,"1. User is on Skyscanner home page.
+2. User is not logged in	
+		
+		
+		
+		","1. Perform a valid flight search.
+2. Navigate to Stop Filter.
+3. Select Direct Flights.
+4. Apply the filter.
+5. Review the displayed results.","From: Hyderabad
+To: Delhi
+Departure: 15 Sep 2026
+Return: 20 Sep 2026
+Travellers: 2 Adults, 1 Child
+Child Age: 11
+Cabin: Business",Only direct flights with 0 stops are displayed. Connecting flights are excluded from the results.,As Expected,Pass,
+TC_06,R-106,Verify Everywhere Destination Search,Verify that the user can select Everywhere as the destination and view available destinations from the selected departure location.,"1. User is on Skyscanner home page.
+2. User is not logged in
+		
+		
+		
+		","1. Enter a valid departure location.
+2. Select Everywhere as the destination.
+3. Select valid travel dates.
+4. Click Search.
+5. Review the displayed destinations.","From: Hyderabad
+To: Everywhere
+Departure: 15 Sep 2026
+Return: 20 Sep 2026
+Travellers: 2 Adults, 1 Child
+Child Age: 11
+Cabin: Business",The system displays available destinations from the selected departure location along with relevant flight information.,As Expected,Pass,
+TC_07,R-107,Verify Flight Selection and Provider Redirection,Verify that the user can select a flight from the search results and continue the booking process through the airline or travel provider.,"1. User is on Skyscanner home page.
+2. User is not logged in
+		
+		
+		
+		","1. Perform a valid flight search.
+2. Select a flight from the results.
+3. Click the select to continue booking the selected flight.
+4. Click on Go to site.
+5. Observe the redirected page.","From: Hyderabad
+To: Delhi
+Departure: 15 Sep 2026
+Return: 20 Sep 2026
+Travellers: 2 Adults, 1 Child
+Child Age: 11
+Cabin: Business",The user is redirected to the relevant airline or travel provider page to continue the booking process.,As Expected,Pass,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
